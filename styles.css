@@ -3,6 +3,9 @@
     --texto: #f1eefc;
     --violeta: #8b6bff;
     --celeste: #57e2d6;
+    --borde: #2a2c46;
+    --fondo-suave: #262a4e; 
+    --texto-s: #9994b8;
 }
 
 * { box-sizing: border-box; }
@@ -52,3 +55,29 @@ body::before {
   background-clip: text;
   color: transparent;
 }
+
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.7rem 6vw;
+  background: var(--fondo-suave);
+  border-bottom: 1px solid var(--borde);
+}
+
+.topnav nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.topnav nav a {
+  font-size: 0.95rem;
+  color: var(--texto-s);
+  transition: color 0.2s ease;
+}
+
+.topnav nav a:hover { color: var(--texto); }
