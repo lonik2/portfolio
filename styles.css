@@ -81,3 +81,56 @@ body::before {
 }
 
 .topnav nav a:hover { color: var(--texto); }
+
+
+section { padding: 5rem 6vw; }
+
+.section-titulo {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 0.4rem;
+}
+
+.section-sub {
+  color: var(--texto-s);
+  margin: 0 0 2rem;
+  max-width: 60ch;
+}
+
+.sobre-mi .section-sub { max-width: 60ch; }
+
+.datos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--texto-s);
+  font-size: 0.95rem;
+}
+
+.datos-lista i { color: var(--celeste); margin-right: 0.5rem; }
+
+.habilidades-titulo {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+}
+
+.habiidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.burbuja {
+  font-size: 0.9rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--fondo-suave);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
