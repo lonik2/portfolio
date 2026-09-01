@@ -27,9 +27,6 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(600px circle at 15% 10%, rgba(139, 107, 255, 0.16), transparent 60%),
-    radial-gradient(500px circle at 90% 30%, rgba(87, 226, 214, 0.10), transparent 55%);
 }
 
 .inicio {
@@ -37,8 +34,11 @@ body::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center; 
   padding: 4vw 6vw;
   max-width: 780px;
+  margin: 0 auto;
 }
 
 .inicio-nombre {
@@ -60,7 +60,7 @@ body::before {
   font-size: 1.15rem;
   color: var(--texto-s);
   max-width: 52ch;
-  margin: 0 0 2rem;
+  margin: 0 auto 2rem;
 }
 
 .topnav {
@@ -193,4 +193,35 @@ section { padding: 5rem 6vw; }
   color: var(--texto);
   border-bottom: 1px solid var(--borde);
   padding-bottom: 2px;
+}
+
+.contactos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  max-width: 900px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contactos-carta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--fondo-suave);
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: var(--texto);
+  text-decoration: none;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.contactos-carta i { font-size: 1.1rem; color: var(--celeste); }
+
+.contactos-carta:hover {
+  border-color: var(--violeta);
+  transform: translateY(-2px);
 }
