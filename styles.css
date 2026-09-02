@@ -225,3 +225,51 @@ section { padding: 5rem 6vw; }
   border-color: var(--violeta);
   transform: translateY(-2px);
 }
+
+/* Escondemos el checkbox real pero lo dejamos funcional y accesible */
+.theme-toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+.theme-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--borde);
+  background: var(--fondo-suave);
+  color: var(--celeste);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.theme-toggle-label:hover {
+  transform: rotate(15deg);
+  border-color: var(--violeta);
+}
+
+.theme-toggle-label .bi-moon-stars { display: none; }
+
+html:has(.theme-toggle-input:checked) {
+  --fondo: #f6f5fb;
+  --fondo-suave: #ffffff;
+  --violeta: #6a4bdb;
+  --celeste: #0f9d94;
+  --texto: #1c1a2b;
+  --texto-s: #5a5674;
+  --borde: #ded9f2;
+}
+
+/* Por defecto: sol visible, luna escondida */
+.theme-toggle-label .bi-moon-stars { display: none; }
+
+/* Cuando está marcado: invertimos */
+html:has(.theme-toggle-input:checked) .theme-toggle-label .bi-sun { display: none; }
+html:has(.theme-toggle-input:checked) .theme-toggle-label .bi-moon-stars { display: inline; }
